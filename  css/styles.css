@@ -1,5 +1,6 @@
 :root {
   --primary-text-color: #212121;
+  --primary-text-color-white: #ffffff;
   --primary-background-color: #ffffff;
   --accent-color: #2196f3;
   --font-botton-text: 'Roboto';
@@ -174,6 +175,10 @@ img {
   border: transparent;
   border-radius: 4px;
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-prtfl:last-child {
@@ -192,6 +197,22 @@ img {
 .link-header {
   color: #212121;
   font-size: 14px;
+  display: block;
+  position: relative;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  color: #2196f3;
+  border-radius: 2px;
 }
 
 .link-header:hover,
@@ -221,6 +242,10 @@ img {
   fill: currentColor;
   align-items: center;
   justify-content: center;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-us-header:hover,
@@ -259,6 +284,10 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-us-footer:hover,
@@ -321,6 +350,33 @@ img {
 
 .what-we-do-item:last-child {
   margin-right: 0;
+}
+
+.what-we-do-thumb {
+  position: relative;
+}
+
+.what-we-do-p {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  font-family: var(--font-family-roboto);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.what-we-do-text {
+  display: flex;
+  align-items: center;
 }
 
 .section-our-team {
@@ -396,6 +452,10 @@ img {
   background-color: #ffffff;
   fill: currentColor;
   color: #afb1b8;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-list:hover {
@@ -413,6 +473,10 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   fill: currentColor;
   color: #ffffff;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-list-footer:hover {
@@ -441,6 +505,10 @@ img {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eeeeee;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-item:nth-child(3n) {
@@ -455,6 +523,39 @@ img {
   box-shadow: 1px 4px 6px 0px #00000029;
   box-shadow: 0px 4px 4px 0px #0000000f;
   box-shadow: 0px 1px 1px 0px #0000001f;
+}
+
+.product-item-thumb {
+  display: flex;
+  position: relative;
+}
+
+.product-item-thumb-p {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-item-thumb-p:hover {
+  opacity: 1;
+}
+
+.product-item-p-text {
+  font-family: var(--font-family-roboto);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color-white);
+  padding: 63px 24px;
 }
 
 .prtfl-card-title {
@@ -574,6 +675,10 @@ img {
   align-items: center;
   fill: currentColor;
   color: #afb1b8;
+
+  transition-property: border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-client-item:hover {
